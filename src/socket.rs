@@ -112,6 +112,15 @@ pub trait SocketExt {
 
     /// Accessor for the `ZMQ_IDENTITY` option.
     fn get_identity(&self) -> Result<Vec<u8>>;
+
+    /// Accessor for the `ZMQ_CURVE_PUBLICKEY` option.
+    fn get_curve_publickey(&self) -> Result<Vec<u8>>;
+
+    /// Accessor for the `ZMQ_CURVE_SECRETKEY` option.
+    fn get_curve_secretkey(&self) -> Result<Vec<u8>>;
+
+    /// Accessor for the `ZMQ_CURVE_SERVERKEY` option.
+    fn get_curve_serverkey(&self) -> Result<Vec<u8>>;
 }
 
 macro_rules! getter {
@@ -179,4 +188,8 @@ impl<T: AsZmqSocket> SocketExt for T {
     getter!(get_backlog, i32);
 
     getter!(get_identity, Vec<u8>);
+
+    getter!(get_curve_publickey, Vec<u8>);
+    getter!(get_curve_secretkey, Vec<u8>);
+    getter!(get_curve_serverkey, Vec<u8>);
 }

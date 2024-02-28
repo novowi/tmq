@@ -57,6 +57,7 @@ pub use message::Multipart;
 pub use socket::{AsZmqSocket, SocketExt};
 pub use socket_builder::SocketBuilder;
 pub use socket_types::*;
+pub use utils::z85_decode;
 
 /// Crate re-exports
 pub(crate) use comm::*;
@@ -71,3 +72,4 @@ mod poll;
 mod socket;
 mod socket_builder;
 mod socket_types;
+mod utils;
