@@ -12,7 +12,7 @@ edition = "2018"
 futures = { version = "0.3", default-features = false, features = ["alloc"] }
 tokio = { version = "1.29", features = ["net"] }
 # zmq = "0.10"
-zmq = { git = "ssh://git@github.com/conanoc/rust-zmq.git", branch = "libsodium" }
+zmq = { git = "ssh://git@github.com/gth828r/rust-zmq.git", branch = "libsodium", features = ["libsodium"] }
 log = "0.4"
 thiserror = "1"
 
