@@ -11,7 +11,8 @@ edition = "2018"
 [dependencies]
 futures = { version = "0.3", default-features = false, features = ["alloc"] }
 tokio = { version = "1.29", features = ["net"] }
-zmq = "0.10"
+# zmq = "0.10"
+zmq = { git = "ssh://git@github.com/conanoc/rust-zmq.git", branch = "libsodium" }
 log = "0.4"
 thiserror = "1"
 
